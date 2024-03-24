@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#variables
+key_name="school"
+key_bits="4096"
+passphrase="betty"
+
+#creates RSA key pair
+ssh-keygen -b 4096 -f school -t rsa -N betty
+
