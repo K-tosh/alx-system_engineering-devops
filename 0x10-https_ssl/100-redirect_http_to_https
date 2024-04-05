@@ -41,11 +41,11 @@ frontend kantosh-frontend
         default_backend kantosh-backend
 
 frontend kantosh-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/clickviral.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.kantosh.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend kantosh-backend
 
 backend kantosh-backend
         balance roundrobin
-        server 151666-web-01 100.25.190.21:80 check
-        server 151666-web-02 54.160.77.90:80 check
+        server 528302-web-01 100.25.4.208:80 check
+        server 528302-web-02 52.73.24.36:80 check
